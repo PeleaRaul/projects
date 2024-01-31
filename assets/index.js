@@ -23,3 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+$(document).ready(function() {
+  // Add smooth scrolling to all links with the href containing '#'
+  $('a[href^="#"]').on('click', function(event) {
+      event.preventDefault();
+
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+          $('html, body').stop().animate({
+              scrollTop: target.offset().top
+          }, 1000); // Adjust the duration (in milliseconds) as needed
+      }
+  });
+});
