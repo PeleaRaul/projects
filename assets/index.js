@@ -10,3 +10,16 @@
       loadingOverlay.style.display = 'none';
     }, 1500); // Adjust the duration (in milliseconds) for a smoother transition
   });
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var images = document.querySelectorAll('img');
+    images.forEach(function(image) {
+        image.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    });
+});
